@@ -7,6 +7,19 @@ dotenv.config({path:'./env'})
 
 import connect_db from "./db/db.js"
 connect_db()
+// promise returns 
+.then(()=>{
+    app.listen(process.env.MONGO_URL,()=>{
+ console.log(`server is running at port${process.env.PORT}`)
+ app.on("error",(error)=>{
+console.log("express connection error",error)
+ })
+    })
+})
+.catch((error)=>{
+console.log("mongo db connection  error !!",error)
+})
+
 // import expresss from "express"
 // const app = express()
 // async function connect_db (){
