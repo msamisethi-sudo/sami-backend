@@ -6,3 +6,4 @@ this.data = data
 this.success = this.success < 400
     }
 }
+export {api_responce}
